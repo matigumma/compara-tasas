@@ -116,46 +116,43 @@ const investments: {
   metaImage='https://i.ibb.co/QYKMwcL/Twitter-post-2.pnG'
   metaDescription='Compara las tasas de rendimiento que ofrecen las principales billeteras digitales y sacale mas jugo a tu pesos.'
 >
-  <div
-    id='containter'
-    class='container mx-auto mx-4 px-4 my-6 max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg'
+  <h1
+    class='text-3xl text-gray-900 font-bold my-6 dark:text-gray-100'
   >
-    <h1
-      class='text-3xl text-gray-900 font-bold my-6 dark:text-gray-100'
-    >
-      ¡Elegí el fondo con <span class='text-indigo-500'
-        >más rendimientos</span
-      > para vos!
-    </h1>
-    <Dolares />
-    {
-      investments.map((investment) => (
-        <InvestmentSection
-          data={sortedData}
-          investmentFilter={investment?.filterInvestment}
-          title={investment.title}
-        />
-      ))
-    }
+    ¡Elegí el fondo con <span class='text-indigo-500'
+      >más rendimientos</span
+    > para vos!
+  </h1>
 
-    <CriptoUsd
-      exchanges={exchanges}
-      title={'Cripto'}
-      subtitle={'Compará en donde comprar crypto al mejor precio en'}
-    />
+  <Dolares />
 
-    <a
-      id='cafecito'
-      href='https://cafecito.app/ferminrp'
-      rel='noopener'
-      target='_blank'
-      ><img
-        width='192'
-        height='40'
-        srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x'
-        src='https://cdn.cafecito.app/imgs/buttons/button_3.png'
-        alt='Invitame un café en cafecito.app'
-      /></a
-    >
-  </div>
+  {
+    investments.map((investment) => (
+      <InvestmentSection
+        data={sortedData}
+        investmentFilter={investment?.filterInvestment}
+        title={investment.title}
+      />
+    ))
+  }
+
+  <CriptoUsd
+    exchanges={exchanges}
+    title={'Cripto'}
+    subtitle={'Compará en donde comprar crypto al mejor precio en'}
+  />
+
+  <a
+    id='cafecito'
+    href='https://cafecito.app/ferminrp'
+    rel='noopener'
+    target='_blank'
+    ><img
+      width='192'
+      height='40'
+      srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x'
+      src='https://cdn.cafecito.app/imgs/buttons/button_3.png'
+      alt='Invitame un café en cafecito.app'
+    /></a
+  >
 </Layout>
